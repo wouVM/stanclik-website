@@ -32,7 +32,7 @@ export default function SpecjalizacjePage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-[100px] bg-offwhite">
+      <section className="py-[clamp(48px,10vw,100px)] bg-offwhite">
         <div className="w-full max-w-container mx-auto px-[clamp(24px,5vw,80px)]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
@@ -49,7 +49,7 @@ export default function SpecjalizacjePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-navy-mid border-t-[3px] border-gold py-20 text-center relative overflow-hidden">
+      <section className="bg-navy-mid border-t-[3px] border-gold py-[clamp(40px,8vw,80px)] text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_100%_at_50%_50%,rgba(201,168,76,0.05)_0%,transparent_70%)] pointer-events-none" />
         <div className="w-full max-w-container mx-auto px-[clamp(24px,5vw,80px)] relative">
           <h2 className="font-display text-[clamp(32px,4vw,48px)] font-semibold text-white mb-4 leading-[1.15]">

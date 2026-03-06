@@ -47,9 +47,9 @@ export default function AukcjePage() {
             {auctions.map((auction, i) => (
               <article
                 key={i}
-                className="bg-white border border-border rounded-md p-8 transition-all duration-[250ms] hover:shadow-md hover:border-gold/30 group"
+                className="bg-white border border-border rounded-md p-[clamp(20px,4vw,32px)] transition-all duration-[250ms] hover:shadow-md hover:border-gold/30 group"
               >
-                <div className="flex items-center gap-4 mb-4 text-[13px] text-text-light">
+                <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-4 text-[12px] md:text-[13px] text-text-light">
                   <span className="flex items-center gap-[6px]">
                     <Calendar className="w-[14px] h-[14px]" />
                     {auction.date}

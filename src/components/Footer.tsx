@@ -4,9 +4,9 @@ import { services } from "@/lib/services";
 
 export function Footer() {
   return (
-    <footer className="bg-navy pt-[72px]">
+    <footer className="bg-navy pt-[clamp(40px,8vw,72px)]">
       <div className="w-full max-w-container mx-auto px-[clamp(24px,5vw,80px)]">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1.5fr] gap-16 pb-14 border-b border-white/[0.08]">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1.5fr] gap-10 md:gap-16 pb-10 md:pb-14 border-b border-white/[0.08]">
           {/* Column 1: About */}
           <div>
             <div className="font-display text-[24px] font-semibold text-white mb-1">

@@ -13,7 +13,7 @@ export function ServiceCard({ slug, title, description, icon }: ServiceCardProps
   return (
     <Link
       href={`/services/${slug}`}
-      className="group bg-white border border-border rounded-md p-[36px_32px] cursor-pointer transition-all duration-[250ms] ease-out relative overflow-hidden
+      className="group bg-white border border-border rounded-md p-[clamp(20px,4vw,36px)_clamp(16px,3.5vw,32px)] cursor-pointer transition-all duration-[250ms] ease-out relative overflow-hidden
         before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[3px] before:bg-gold before:scale-y-0 before:transition-transform before:duration-[250ms] before:ease-out before:origin-bottom
         hover:border-gold/30 hover:shadow-md hover:-translate-y-[3px] hover:before:scale-y-100"
     >

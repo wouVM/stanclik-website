@@ -27,7 +27,7 @@ export function ContactForm() {
   return (
     <div>
       <Eyebrow>Formularz kontaktowy</Eyebrow>
-      <h3 className="font-display text-[32px] font-semibold text-navy mb-8 leading-[1.2]">
+      <h3 className="font-display text-[clamp(24px,4vw,32px)] font-semibold text-navy mb-6 md:mb-8 leading-[1.2]">
         Skontaktuj się z nami
       </h3>
       <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 sm:grid-cols-2 gap-4">

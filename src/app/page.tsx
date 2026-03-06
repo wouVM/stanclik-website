@@ -36,7 +36,7 @@ export default function HomePage() {
         <div className="absolute left-0 top-[10%] bottom-[10%] w-[3px] bg-gradient-to-b from-transparent via-gold to-transparent" />
 
         <div className="w-full max-w-container mx-auto px-[clamp(24px,5vw,80px)] relative z-[2]">
-          <div className="py-[100px] max-w-[720px]">
+          <div className="py-[clamp(48px,10vw,100px)] max-w-[720px]">
             <div className="inline-flex items-center gap-3 text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-7 before:content-[''] before:block before:w-8 before:h-[1.5px] before:bg-gold before:flex-shrink-0">
               Kancelaria Restrukturyzacyjna
             </div>
@@ -47,7 +47,7 @@ export default function HomePage() {
               <br />
               <em className="italic text-gold">Tobie i Twojej firmie.</em>
             </h1>
-            <p className="text-[18px] text-white/65 leading-[1.65] mb-12 max-w-[520px] font-light">
+            <p className="text-[clamp(15px,2.5vw,18px)] text-white/65 leading-[1.65] mb-8 md:mb-12 max-w-[520px] font-light">
               Jesteśmy wyspecjalizowanym zespołem prawników biznesowych,
               ekonomistów i menadżerów. Działamy tam, gdzie stawką jest
               przyszłość Twojego przedsiębiorstwa.
@@ -85,10 +85,11 @@ export default function HomePage() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className={`py-9 px-8 flex flex-col items-center text-center relative
-                  ${i > 0 ? "before:content-[''] before:absolute before:left-0 before:top-[20%] before:bottom-[20%] before:w-[1px] before:bg-white/[0.12]" : ""}`}
+                className={`py-6 px-4 md:py-9 md:px-8 flex flex-col items-center text-center relative
+                  ${i > 0 ? "before:content-[''] before:absolute before:left-0 before:top-[20%] before:bottom-[20%] before:w-[1px] before:bg-white/[0.12]" : ""}
+                  ${i === 2 ? "before:hidden md:before:block" : ""}`}
               >
-                <div className="font-display text-[52px] font-semibold text-gold leading-none mb-2 tracking-[-0.02em]">
+                <div className="font-display text-[clamp(32px,8vw,52px)] font-semibold text-gold leading-none mb-2 tracking-[-0.02em]">
                   {stat.number}
                 </div>
                 <div className="text-[12px] text-white/55 tracking-[0.1em] uppercase font-normal">
@@ -101,9 +102,9 @@ export default function HomePage() {
       </section>
 
       {/* ═══ ABOUT SPLIT ═══ */}
-      <section className="py-[100px] bg-offwhite">
+      <section className="py-[clamp(48px,10vw,100px)] bg-offwhite">
         <div className="w-full max-w-container mx-auto px-[clamp(24px,5vw,80px)]">
-          <div className="grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-12 lg:gap-20 items-center">
             <div>
               <div className="inline-block bg-gold/[0.12] text-gold text-[10px] font-bold tracking-[0.16em] uppercase px-3 py-1 rounded-full border border-gold/25 mb-6">
                 O nas
@@ -145,7 +146,7 @@ export default function HomePage() {
                   }}
                 />
                 <div className="absolute bottom-10 left-10 right-10 h-[3px] bg-gradient-to-r from-gold to-transparent" />
-                <div className="absolute bottom-14 left-14 right-14 font-display text-[28px] font-medium text-white/15 leading-[1.3] italic">
+                <div className="absolute bottom-10 left-8 right-8 md:bottom-14 md:left-14 md:right-14 font-display text-[clamp(20px,4vw,28px)] font-medium text-white/15 leading-[1.3] italic">
                   Prawo.
                   <br />
                   Doświadczenie.
@@ -154,11 +155,11 @@ export default function HomePage() {
                 </div>
               </div>
               {/* Badge */}
-              <div className="absolute -bottom-5 -right-5 w-[120px] h-[120px] bg-gold rounded-full flex flex-col items-center justify-center gap-[2px] shadow-lg">
-                <div className="font-display text-[36px] font-bold text-navy leading-none">
+              <div className="absolute -bottom-3 -right-3 md:-bottom-5 md:-right-5 w-[90px] h-[90px] md:w-[120px] md:h-[120px] bg-gold rounded-full flex flex-col items-center justify-center gap-[2px] shadow-lg">
+                <div className="font-display text-[24px] md:text-[36px] font-bold text-navy leading-none">
                   15+
                 </div>
-                <div className="text-[9px] font-semibold text-navy tracking-[0.1em] uppercase text-center leading-[1.3]">
+                <div className="text-[7px] md:text-[9px] font-semibold text-navy tracking-[0.1em] uppercase text-center leading-[1.3]">
                   lat na rynku
                 </div>
               </div>
@@ -172,7 +173,7 @@ export default function HomePage() {
         <div className="w-full max-w-none">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Co robimy? */}
-            <div className="px-16 py-20 relative">
+            <div className="px-[clamp(24px,5vw,64px)] py-[clamp(40px,6vw,80px)] relative">
               <div className="inline-block bg-white/[0.06] text-white/40 text-[10px] font-bold tracking-[0.16em] uppercase px-3 py-1 rounded-full border border-white/10 mb-6">
                 Działalność
               </div>
@@ -200,7 +201,7 @@ export default function HomePage() {
             </div>
 
             {/* Jak działamy? */}
-            <div className="px-16 py-20 relative before:content-[''] before:absolute before:left-0 before:top-[10%] before:bottom-[10%] before:w-[1px] before:bg-white/[0.08]">
+            <div className="px-[clamp(24px,5vw,64px)] py-[clamp(40px,6vw,80px)] relative before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[1px] before:bg-white/[0.08] before:hidden md:before:block">
               <div className="inline-block bg-white/[0.06] text-white/40 text-[10px] font-bold tracking-[0.16em] uppercase px-3 py-1 rounded-full border border-white/10 mb-6">
                 Metodyka
               </div>
@@ -230,9 +231,9 @@ export default function HomePage() {
       </section>
 
       {/* ═══ SERVICES GRID ═══ */}
-      <section className="py-[100px] bg-white">
+      <section className="py-[clamp(48px,10vw,100px)] bg-white">
         <div className="w-full max-w-container mx-auto px-[clamp(24px,5vw,80px)]">
-          <div className="text-center max-w-[640px] mx-auto mb-16">
+          <div className="text-center max-w-[640px] mx-auto mb-10 md:mb-16">
             <Eyebrow>Co możemy dla Ciebie zrobić</Eyebrow>
             <h2 className="font-display text-[clamp(32px,4vw,48px)] font-semibold text-navy leading-[1.15] mb-4 tracking-[-0.01em]">
               Sprawdź, w czym możemy Ci pomóc
@@ -258,7 +259,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ CTA BANNER ═══ */}
-      <section className="bg-navy-mid border-t-[3px] border-gold py-20 text-center relative overflow-hidden">
+      <section className="bg-navy-mid border-t-[3px] border-gold py-[clamp(40px,8vw,80px)] text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_100%_at_50%_50%,rgba(201,168,76,0.05)_0%,transparent_70%)] pointer-events-none" />
         <div className="w-full max-w-container mx-auto px-[clamp(24px,5vw,80px)] relative">
           <h2 className="font-display text-[clamp(32px,4vw,52px)] font-semibold text-white mb-4 leading-[1.15]">
@@ -281,11 +282,11 @@ export default function HomePage() {
       </section>
 
       {/* ═══ CONTACT STRIP ═══ */}
-      <div className="grid grid-cols-1 lg:grid-cols-[40fr_60fr] min-h-[480px]">
-        <div className="bg-offwhite px-[clamp(24px,5vw,80px)] py-[72px] flex flex-col justify-center gap-9">
+      <div className="grid grid-cols-1 lg:grid-cols-[40fr_60fr]">
+        <div className="bg-offwhite px-[clamp(24px,5vw,80px)] py-[clamp(40px,6vw,72px)] flex flex-col justify-center gap-7 md:gap-9">
           <div>
             <Eyebrow>Skontaktuj się</Eyebrow>
-            <h2 className="font-display text-[40px] font-semibold text-navy leading-[1.15] mb-2">
+            <h2 className="font-display text-[clamp(28px,5vw,40px)] font-semibold text-navy leading-[1.15] mb-2">
               Jesteśmy do Twojej dyspozycji
             </h2>
           </div>
@@ -357,7 +358,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="bg-white px-[clamp(24px,5vw,80px)] py-[72px] flex flex-col justify-center">
+        <div className="bg-white px-[clamp(24px,5vw,80px)] py-[clamp(40px,6vw,72px)] flex flex-col justify-center">
           <ContactForm />
         </div>
       </div>

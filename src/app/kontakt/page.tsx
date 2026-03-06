@@ -28,11 +28,11 @@ export default function KontaktPage() {
       </section>
 
       {/* Contact Strip */}
-      <div className="grid grid-cols-1 lg:grid-cols-[40fr_60fr] min-h-[480px]">
-        <div className="bg-offwhite px-[clamp(24px,5vw,80px)] py-[72px] flex flex-col justify-center gap-9">
+      <div className="grid grid-cols-1 lg:grid-cols-[40fr_60fr]">
+        <div className="bg-offwhite px-[clamp(24px,5vw,80px)] py-[clamp(40px,6vw,72px)] flex flex-col justify-center gap-7 md:gap-9">
           <div>
             <Eyebrow>Dane kontaktowe</Eyebrow>
-            <h2 className="font-display text-[36px] font-semibold text-navy leading-[1.15] mb-2">
+            <h2 className="font-display text-[clamp(28px,5vw,36px)] font-semibold text-navy leading-[1.15] mb-2">
               Jesteśmy do Twojej dyspozycji
             </h2>
           </div>
@@ -104,7 +104,7 @@ export default function KontaktPage() {
           </div>
         </div>
 
-        <div className="bg-white px-[clamp(24px,5vw,80px)] py-[72px] flex flex-col justify-center">
+        <div className="bg-white px-[clamp(24px,5vw,80px)] py-[clamp(40px,6vw,72px)] flex flex-col justify-center">
           <ContactForm />
         </div>
       </div>
@@ -112,7 +112,7 @@ export default function KontaktPage() {
       {/* Map placeholder */}
       <section className="bg-offwhite py-16">
         <div className="w-full max-w-container mx-auto px-[clamp(24px,5vw,80px)]">
-          <div className="aspect-[21/9] bg-navy-mid/10 rounded-lg flex items-center justify-center border border-border">
+          <div className="aspect-[16/9] md:aspect-[21/9] bg-navy-mid/10 rounded-lg flex items-center justify-center border border-border">
             <div className="text-center">
               <MapPin className="w-12 h-12 text-gold mx-auto mb-4" />
               <p className="text-text-mid text-[14px]">

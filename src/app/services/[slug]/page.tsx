@@ -46,11 +46,11 @@ export default function ServicePage({ params }: PageProps) {
             <ArrowLeft className="w-4 h-4" />
             Wszystkie specjalizacje
           </Link>
-          <div className="flex items-start gap-6">
-            <div className="w-16 h-16 bg-gold/[0.12] border border-gold/25 rounded-md flex items-center justify-center flex-shrink-0">
+          <div className="flex items-start gap-4 md:gap-6">
+            <div className="w-12 h-12 md:w-16 md:h-16 bg-gold/[0.12] border border-gold/25 rounded-md flex items-center justify-center flex-shrink-0">
               <ServiceIcon
                 name={service.icon}
-                className="w-8 h-8 stroke-gold"
+                className="w-6 h-6 md:w-8 md:h-8 stroke-gold"
               />
             </div>
             <div>
@@ -105,15 +105,15 @@ export default function ServicePage({ params }: PageProps) {
       </section>
 
       {/* Other services */}
-      <section className="py-[80px] bg-offwhite">
+      <section className="py-[clamp(48px,8vw,80px)] bg-offwhite">
         <div className="w-full max-w-container mx-auto px-[clamp(24px,5vw,80px)]">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <Eyebrow>Pozostałe specjalizacje</Eyebrow>
             <h2 className="font-display text-[clamp(28px,3vw,40px)] font-semibold text-navy leading-[1.15]">
               Sprawdź inne obszary naszej praktyki
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {otherServices.map((s) => (
               <ServiceCard
                 key={s.slug}
